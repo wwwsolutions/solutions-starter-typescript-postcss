@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "target": "ES5",
+        "module": "ES2015",
+        "lib": [
+            "ES2015",
+            "DOM"
+        ],
+        "noImplicitAny": true,
+        "strict": true,
+        "strictNullChecks": true,
+        "experimentalDecorators": true
+    }
+}

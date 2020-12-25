@@ -1,0 +1,73 @@
+
+{
+  "extends": "stylelint-config-standard",
+  "plugins": [  ],
+  "rules": {
+    "no-eol-whitespace": null,
+    "indentation": 2,
+    "declaration-empty-line-before": null,
+     "declaration-colon-newline-after": null,
+     "value-list-comma-newline-after": null,
+     "value-keyword-case": null,
+    "no-invalid-double-slash-comments": null,
+    "no-descending-specificity": null,
+    "string-quotes": "double",
+    "selector-type-no-unknown": [
+      true, { ignoreTypes: ["ion-icon"] }
+      ],
+    "block-closing-brace-newline-before": null,
+    "rule-empty-line-before":  null,
+    "at-rule-empty-line-before":  null,
+    "comment-empty-line-before":  null,
+    "font-family-no-duplicate-names": null,
+    "font-family-no-missing-generic-family-keyword": null,
+    "comment-whitespace-inside": null,
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": [
+          "/^define-/",
+          "if",
+          "else",
+          "for",
+          "use",
+          "util",
+          "mixin",
+          "mixin-content",
+          "extend",
+          "each",
+          "map",
+          "include",
+          "component",
+          "modifier",
+          "descendent",
+        ]
+      }
+    ],
+    "property-no-unknown": [
+      true,
+      {
+        "ignoreProperties": [
+          "font-range",
+          "min-font-size",
+          "max-font-size",
+          "lower-font-range",
+          "upper-font-range",
+          "line-height-range",
+          "min-line-height",
+          "max-line-height",
+          "lower-line-height-range",
+          "upper-line-height-range",
+          "letter-spacing-range",
+          "min-letter-spacing",
+          "max-letter-spacing",
+          "lower-letter-spacing-range",
+          "upper-letter-spacing-range"
+        ]
+      }
+    ],
+    "number-leading-zero": null,
+    "length-zero-no-unit": null,
+    "unit-allowed-list": ["vw", "vh", "vmax", "vmin", "em", "rem", "s", "px", "%", "ms", "fr", "deg", "x", "dpi"],
+  }
+}

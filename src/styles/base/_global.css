@@ -1,0 +1,46 @@
+/* *,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+ */
+:root {
+  font-size: 62.5%;
+  /* font-size: 1rem; */
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  padding: 0 5em;
+  font-size: 1rem;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 100;
+  background-color: lightgreen;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 1.15em 0;
+  padding: 0 1em;
+  font-size: 3em;
+  font-family: "Noto Sans", sans-serif;
+  line-height: 1.85em;
+  color: lightgreen;
+  background-color: rgba(0, 0, 0, 0.65);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.hidden {
+  display: none !important;
+}

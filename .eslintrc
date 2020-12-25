@@ -1,0 +1,65 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "overrides": [
+    {
+        "files": [
+            "*.ts"
+        ],
+        "rules": {
+            "@typescript-eslint/explicit-module-boundary-types": "off",
+            "@typescript-eslint/no-non-null-assertion": "off"
+        }
+    }
+  ],
+  "parserOptions": {
+    "allowImportExportEverywhere": true,
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "modules": true,
+      "spread": true,
+      "restParams": true
+    }
+  },
+  "rules": {
+    "no-async-promise-executor": 0,
+    "no-dupe-else-if": 0,
+    "no-import-assign": 0,
+    "no-misleading-character-class": 0,
+    "no-setter-return": 0,
+    "no-useless-catch": 0,
+    "no-console": "off",
+    "indent": [
+      "error",
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "linebreak-style": 0,
+    "quotes": [
+      "error",
+      "single",
+      {
+        "allowTemplateLiterals": true
+      }
+    ],
+    "semi": [
+      "error",
+      "always"
+    ],
+    "no-unused-vars": 0
+  },
+  "env": {
+    "browser": true,
+    "amd": true,
+    "node": true
+  }
+}

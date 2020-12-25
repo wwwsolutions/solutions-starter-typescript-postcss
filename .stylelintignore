@@ -1,0 +1,14 @@
+node_modules/**
+build-utils/**
+dist/**
+src/app/**
+src/assets/**
+src/presets/**
+src/templates/**
+src/vendors/**
+
+src/styles/main.css
+src/styles/base/_mixins.css
+src/styles/palettes/**
+
+src/styles/generated/**

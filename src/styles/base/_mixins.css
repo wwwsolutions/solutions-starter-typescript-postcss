@@ -1,0 +1,244 @@
+/* 
+
+https://github.com/postcss/postcss-mixins 
+https://www.npmjs.com/package/postcss-conditionals
+
+*/
+
+/* helpers */
+
+/* 
+  Dimensions Toolkit
+
+*****************************************/
+@define-mixin fullscreen {
+  min-height: 100vh;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+@define-mixin box $width, $height: $width {
+  width: $(width);
+  height: $(height);
+}
+
+@define-mixin noMargin {
+  margin: 0;
+}
+
+@define-mixin noPadding {
+  padding: 0;
+}
+
+@define-mixin noMarginNoPadding {
+  margin: 0;
+  padding: 0;
+}
+
+/* 
+  Flexbox Toolkit
+
+*****************************************/
+
+@define-mixin flexRow {
+  display: flex;
+  flex-direction: row;
+}
+
+@define-mixin flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+@define-mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@define-mixin flexVerticalCenter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+@define-mixin flexSpace {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+@define-mixin flexVerticalSpace {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+/* 
+  Positioning Toolkit
+
+*****************************************/
+@define-mixin centerText {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 
+  Colors Toolkit
+
+*****************************************/
+@define-mixin colorScheme $bgColor, $color {
+  background-color: $bgColor;
+  color: $color;
+
+  &::before,
+  &::after {
+    background-color: $bgColor;
+    color: $color;
+  }
+}
+
+/* 
+  Shadows Toolkit
+
+  https://www.researchgate.net/figure/Shadows-Types-Self-and-Cast-Umbra-and-Penumbra_fig2_283503034
+  https://css-tricks.com/neumorphism-and-css/
+
+*****************************************/
+@define-mixin shadowSmall {
+  box-shadow: 1px 1px 3px color(black a(0.2));
+}
+
+@define-mixin shadowNormal {
+  box-shadow: 0px 3px 10px color(black a(0.4));
+}
+
+/* 
+  Borders Toolkit
+
+*****************************************/
+@define-mixin roundCorners {
+  border-radius: 0.25em;
+}
+
+/* 
+  Floats Toolkit
+
+*****************************************/
+@define-mixin clearfix {
+  &::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+}
+
+/* 
+  Backgrounds Toolkit
+
+*****************************************/
+@define-mixin coverBackground {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* 
+  Pseudo Elements Toolkit
+
+*****************************************/
+@define-mixin pseudo $width: 100%, $height: 100%, $display: inline-block,
+  $pos: absolute, $content: "" {
+  content: $(content);
+  display: $(display);
+  position: $(pos);
+  width: $(width);
+  height: $(height);
+}
+
+/* 
+  Supports Toolkit
+
+*****************************************/
+@define-mixin supportsGrid {
+  @supports (grid-area: auto) {
+    @mixin-content;
+  }
+}
+
+@define-mixin supportsBgClip {
+  @supports (-webkit-background-clip: text) {
+    @mixin-content;
+  }
+}
+
+/* Responsiveness / Media Queries Toolkit */
+
+/* mobile first approach */
+@define-mixin atSmall {
+  @media (min-width: 530px) {
+    @mixin-content;
+  }
+}
+
+@define-mixin atMedium {
+  @media (min-width: 800px) {
+    @mixin-content;
+  }
+}
+
+@define-mixin atLarge {
+  @media (min-width: 1010px) {
+    @mixin-content;
+  }
+}
+
+@define-mixin atXLarge {
+  @media (min-width: 1401px) {
+    @mixin-content;
+  }
+}
+
+@define-mixin atULarge {
+  @media (min-width: 1601px) {
+    @mixin-content;
+  }
+}
+
+/* desktop first approach 
+
+  @define-mixin atSmall {
+    @media (max-width: 530px) {
+      @mixin-content;
+    }
+  }
+
+  @define-mixin atMedium {
+    @media (max-width: 800px) {
+      @mixin-content;
+    }
+  }
+
+  @define-mixin atLarge {
+    @media (max-width: 1010px) {
+      @mixin-content;
+    }
+  }
+
+*/
+
+/* 
+  Fonts Toolkit
+
+  use 'Font Magician' postcss plugin:
+  https://github.com/jonathantneal/postcss-font-magician
+
+*****************************************/
+
+/* 
+  Utility Toolkit
+
+*****************************************/
