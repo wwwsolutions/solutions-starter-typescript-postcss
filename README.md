@@ -11,5 +11,3 @@
 - Lodash
 - Ramda
 - Font Awesome
-
----
