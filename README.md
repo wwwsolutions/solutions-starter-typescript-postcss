@@ -12,4 +12,3 @@
 - Ramda
 - Font Awesome
 
----
